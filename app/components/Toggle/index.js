@@ -12,7 +12,7 @@ import ToggleOption from '../ToggleOption';
 
 function Toggle(props) {
   let content = <option>--</option>;
-
+console.log(props.messages)
   // If we have items, render them
   if (props.values) {
     content = props.values.map(value => (

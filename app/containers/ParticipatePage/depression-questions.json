@@ -1,0 +1,112 @@
+[
+  {
+    "id": 1,
+    "title": "",
+    "options": [
+      {
+        "id": 0,
+        "title": "I do not feel sad"
+      },
+      {
+        "id": 1,
+        "title": "I feel sad"
+      },
+      {
+        "id": 2,
+        "title": "I am sad all the time and I can not snap out of it"
+      },
+      {
+        "id": 3,
+        "title": "I am so sad and unhappy that I can not stand it."
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "title": "",
+    "options": [
+      {
+        "id": 0,
+        "title": "I am not particularly discouraged about the future"
+      },
+      {
+        "id": 1,
+        "title": "I feel discouraged about the future"
+      },
+      {
+        "id": 2,
+        "title": "I feel I have nothing to look forward to"
+      },
+      {
+        "id": 3,
+        "title": "I feel the future is hopeless and that things cannot improve"
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "title": "",
+    "options": [
+      {
+        "id": 0,
+        "title": "I do not feel like a failure"
+      },
+      {
+        "id": 1,
+        "title": "I feel I have failed more than the average person"
+      },
+      {
+        "id": 2,
+        "title": "As I look back on my life, all I can see is a lot of failures"
+      },
+      {
+        "id": 3,
+        "title": "I feel I am a complete failure as a person"
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "title": "",
+    "options": [
+      {
+        "id": 0,
+        "title": "I get as much satisfaction out of things as I used to"
+      },
+      {
+        "id": 1,
+        "title": "I do not enjoy things the way I used to"
+      },
+      {
+        "id": 2,
+        "title": "I do not get real satisfaction out of anything anymore"
+      },
+      {
+        "id": 3,
+        "title": "I am dissatisfied or bored with everything"
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "title": "",
+    "options": [
+      {
+        "id": 0,
+        "title": "I do not feel particularly guilty "
+      },
+      {
+        "id": 1,
+        "title": "I feel guilty a good part of the time"
+      },
+      {
+        "id": 2,
+        "title": "I feel quite guilty most of the time"
+      },
+      {
+        "id": 3,
+        "title": "I feel guilty all of the time"
+      }
+    ]
+  }
+]

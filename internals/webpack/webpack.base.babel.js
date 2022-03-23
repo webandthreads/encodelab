@@ -42,6 +42,11 @@ module.exports = options => ({
         use: ['style-loader', 'css-loader'],
       },
       {
+        test: /\.s[ac]ss$/,
+        exclude: /node_modules/,
+        use: ['style-loader', 'css-loader', 'sass-loader'],
+      },
+      {
         test: /\.(eot|otf|ttf|woff|woff2)$/,
         use: 'file-loader',
       },
@@ -85,7 +90,8 @@ module.exports = options => ({
                 optimizationLevel: 7,
               },
               pngquant: {
-                quality: '65-90',
+                // quality: '65-90',
+                quality: [0.65, 0.90],
                 speed: 4,
               },
             },

@@ -1,0 +1,34 @@
+[
+  {
+    "id": "1",
+    "title": "All Items",
+    "cardIds": [],
+    "bgColor": "#465362",
+    "color": "#ffffff",
+    "width": "250"
+  },
+  {
+    "id": "2",
+    "title": "Your Basket",
+    "cardIds": [],
+    "bgColor": "#18a2b8",
+    "color": "#ffffff",
+    "width": "250"
+  },
+  {
+    "id": "3",
+    "title": "Friends Basket",
+    "cardIds": [],
+    "bgColor": "#ffc108",
+    "color": "#ffffff",
+    "width": "250"
+  },
+  {
+    "id": "4",
+    "title": "Strangers Basket",
+    "cardIds": [],
+    "bgColor": "#343a40",
+    "color": "#ffffff",
+    "width": "250"
+  }
+]

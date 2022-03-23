@@ -17,6 +17,12 @@ import { changeLocale } from '../LanguageProvider/actions';
 import { makeSelectLocale } from '../LanguageProvider/selectors';
 
 export function LocaleToggle(props) {
+  const [showLocaleOptions, setShowLocaleOptions] = React.useState(false);
+  const setLocale = locale => {
+    changeLocale(locale);
+    setShowLocaleOptions(false);
+    return false;
+  };
   return (
     <Wrapper>
       <Toggle
@@ -25,6 +31,31 @@ export function LocaleToggle(props) {
         messages={messages}
         onToggle={props.onLocaleToggle}
       />
+      <div className="btn-group dropdown-style-1">
+        <button
+          id="local-toggle"
+          type="button"
+          onClick={() => setShowLocaleOptions(!showLocaleOptions)}
+          className="btn dropdown-toggle sm-width-100"
+          data-toggle="dropdown"
+          aria-haspopup="true"
+          aria-expanded="false"
+        >
+          {props.locale} <span className="caret" />
+        </button>
+        {showLocaleOptions && (
+          <ul className="dropdown-menu show">
+            {appLocales.map(value => (
+              <li key={value}>
+                <a href="#" title={value} onClick={() => setLocale(value)}>
+                  <span className={`icon-country ${value}`} />
+                  {value}
+                </a>
+              </li>
+            ))}
+          </ul>
+        )}
+      </div>
     </Wrapper>
   );
 }

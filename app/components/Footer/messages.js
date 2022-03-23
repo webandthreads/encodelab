@@ -8,6 +8,15 @@ import { defineMessages } from 'react-intl';
 export const scope = 'boilerplate.components.Footer';
 
 export default defineMessages({
+  logo: {
+    id: `${scope}.logo`,
+    defaultMessage: 'ENCODE Lab',
+  },
+  summary: {
+    id: `${scope}.summary`,
+    defaultMessage:
+      'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
+  },
   licenseMessage: {
     id: `${scope}.license.message`,
     defaultMessage: 'This project is licensed under the MIT license.',

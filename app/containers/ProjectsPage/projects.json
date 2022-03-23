@@ -1,0 +1,53 @@
+[
+  {
+    "id": 1,
+    "slug": "self-referencing-effect",
+    "title": "Self Referencing Effect",
+    "url": "/research/self-referencing-effect",
+    "participateUrl": "/participate/self-referencing-effect/emotion-induction",
+    "image": {
+      "url": "https://perompon.sirv.com/encodelab/projects/self-referencing-effect.jpg",
+      "thumbAttributes": "w=640",
+      "mainAttributes": "w=900"
+    },
+    "text": "An investigation into the way that self-related memory encoding changes in Alzheimer’s Disease and its clinical neuropsychological implications.",
+    "researcher": "Nicole Mclver",
+    "publishDate": "November 2020",
+    "participate": true,
+    "participateDate": "November 2020"
+  },
+  {
+    "id": 2,
+    "slug": "emotion-induction",
+    "title": "Emotion Induction",
+    "url": "/research/emotion-induction",
+    "participateUrl": "/participate/emotion-induction",
+    "image": {
+      "url": "https://perompon.sirv.com/encodelab/projects/emotion-induction.jpg",
+      "thumbAttributes": "w=640",
+      "mainAttributes": "w=900"
+    },
+    "text": "The amount of time it takes to induce a positive or negative emotion by watching a video.",
+    "researcher": "Nicole Mclver",
+    "publishDate": "November 2020",
+    "participate": false,
+    "participateDate": "November 2020"
+  },
+  {
+    "id": 3,
+    "slug": "implicit-bias",
+    "title": "Implicit Bias",
+    "url": "/research/implicit-bias",
+    "participateUrl": "/participate/implicit-bias",
+    "image": {
+      "url": "https://perompon.sirv.com/encodelab/projects/implicit-bias.png",
+      "thumbAttributes": "w=640",
+      "mainAttributes": "w=900"
+    },
+    "text": "Just how biased are we on any issue? How much of that bias are we aware of and how much does that affect us everyday?.",
+    "researcher": "Tadious Bohwasi",
+    "publishDate": "February 2021",
+    "participate": false,
+    "participateDate": "February 2021"
+  }
+]

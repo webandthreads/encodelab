@@ -1,8 +1,20 @@
 {
   "boilerplate.components.Footer.author.message": "Made with love by {author}.",
   "boilerplate.components.Footer.license.message": "This project is licensed under the MIT license.",
+  "boilerplate.components.Footer.logo": "ENCODE Lab",
+  "boilerplate.components.Footer.summary": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is simply dummy text of the printing and typesetting industry.",
+
   "boilerplate.components.Header.features": "Features",
+  "boilerplate.components.Header.memoryTest": "Memory Test",
+  "boilerplate.components.Header.title": "ENCODE Lab",
+  "boilerplate.components.Header.call_us": "Call us",
   "boilerplate.components.Header.home": "Home",
+  "boilerplate.components.Header.projects": "Projects",
+  "boilerplate.components.Header.people": "People",
+  "boilerplate.components.Header.publications": "Publications",
+  "boilerplate.components.Header.contact": "Contact",
+  "boilerplate.components.Header.blog": "Blog",
+
   "boilerplate.containers.FeaturePage.css.header": "Features",
   "boilerplate.containers.FeaturePage.css.message": "Next generation CSS",
   "boilerplate.containers.FeaturePage.feedback.header": "Instant feedback",

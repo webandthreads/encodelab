@@ -33,6 +33,8 @@ import { makeSelectUsername } from './selectors';
 import reducer from './reducer';
 import saga from './saga';
 
+import background from '../../images/background/homepage.jpg';
+
 const key = 'home';
 
 export function HomePage({
@@ -58,6 +60,44 @@ export function HomePage({
   };
 
   return (
+    <section
+      className="wow fadeIn p-0 parallax sm-background-image-center"
+      data-stellar-background-ratio="0.5"
+      style={{ backgroundImage: `url(${background})` }}
+    >
+      <div>
+        <div className="opacity-extra-medium bg-black" />
+        <div className="container-fluid position-relative full-screen">
+          <div className="slider-typography">
+            <div className="slider-text-middle-main">
+              <div className="slider-text-bottom">
+                <div className="col-12 col-xl-6 col-lg-7 float-left bg-deep-pink-opacity-light padding-six-lr lg-padding-seven-lr padding-five-tb sm-padding-30px-all last-paragraph-no-margin">
+                  <div className="box-separator-line width-180px bg-white lg-width-120px md-width-90px d-none d-lg-block" />
+                  <h3 className="font-weight-600 alt-font text-white-2 width-95 md-width-100">
+                    <FormattedMessage {...messages.header} />
+                  </h3>
+                  <p className="text-large font-weight-300 text-white-2 width-75 lg-width-85 md-width-95 sm-width-100 d-none d-md-block">
+                    <FormattedMessage {...messages.p1} />
+                    <br />
+                    <br />
+                    <FormattedMessage {...messages.p2} />
+                    <ul>
+                      <li>The role of emotion in decision-making.</li>
+                      <li>Apathy and disorders of goal directed behaviour in Alzheimer’s Disease and Stroke.</li>
+                      <li>Neurocognitive correlates of future time perspective during sleep and selfawakening.</li>
+                      <li>Self-referenced memory in Alzheimer’s disease.</li>
+                      <li>Neuropsychological assessment and computer based cognitive rehabilitation training in stroke.</li>
+                    </ul>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+  /* return (
     <article>
       <Helmet>
         <title>Home Page</title>
@@ -98,7 +138,7 @@ export function HomePage({
         </Section>
       </div>
     </article>
-  );
+  ); */
 }
 
 HomePage.propTypes = {
