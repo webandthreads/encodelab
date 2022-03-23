@@ -2,7 +2,7 @@
   "name": "emotion-and-cognitive-lab",
   "homepage": "http://www.encodelab.org",
   "version": "4.0.0",
-  "description": "A highly scalable, offline-first foundation with the best DX and a focus on performance and best practices",
+  "description": "EncodeLab",
   "repository": {
     "type": "git",
     "url": "git://github.com/react-boilerplate/react-boilerplate.git"
@@ -11,7 +11,7 @@
     "npm": ">=5",
     "node": ">=8.15.1"
   },
-  "author": "Max Stoiber",
+  "author": "Webandthreads",
   "license": "MIT",
   "scripts": {
     "analyze:clean": "rimraf stats.json",
