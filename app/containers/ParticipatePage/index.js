@@ -35,9 +35,12 @@ function ParticipatePage({ match }) {
   const onComplete = async data => {
     console.log('>>>>>>>>>>>>>>>>>>>>>>onComplete', JSON.stringify(data));
     try {
-      const response = await axios.post(`http://localhost:1338/api/v1/participation/self-referencing-effect`, JSON.stringify({
-        ...data,
-      }));
+      const response = await axios.post(
+        `https://api.encodelab.org/api/v1/participation/self-referencing-effect`,
+        JSON.stringify({
+          ...data,
+        }),
+      );
       console.log(response);
     } catch (error) {
       console.log(error);
