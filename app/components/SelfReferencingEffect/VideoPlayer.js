@@ -24,7 +24,6 @@ export default class VideoPlayer extends React.Component {
     this.onMoodUpdate = this.onMoodUpdate.bind(this);
     this.onLoadedMetaData = this.onLoadedMetaData.bind(this);
     this.onTimeUpdate = this.onTimeUpdate.bind(this);
-    this.onComplete = this.onComplete.bind(this);
     this.onPlayerReady = this.onPlayerReady.bind(this);
     this.play = this.play.bind(this);
   }
@@ -48,10 +47,6 @@ export default class VideoPlayer extends React.Component {
     if (this.player) {
       this.player.dispose();
     }
-  }
-
-  onComplete() {
-    this.props.onComplete(this.state.readings);
   }
 
   play() {
@@ -95,7 +90,7 @@ export default class VideoPlayer extends React.Component {
     }
 
     if (this.player.currentTime() === this.player.duration()) {
-      this.props.onComplete();
+      this.props.onComplete(this.state.readings);
     }
   }
 

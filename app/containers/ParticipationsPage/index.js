@@ -32,7 +32,7 @@ export default function ParticipationsPage() {
         <div className="container">
           <div className="row hover-option4 blog-post-style3">
             {participations.map(participation => (
-              <div className="grid-item col-12 col-md-4 sm-margin-30px-bottom wow fadeInUp">
+              <div className="grid-item col-12 col-md-4 sm-margin-30px-bottom wow fadeInUp" key={participation.id}>
                 <div className="blog-post bg-light-gray">
                   <div className="blog-post-images overflow-hidden position-relative">
                     <a href={participation.participateUrl}>

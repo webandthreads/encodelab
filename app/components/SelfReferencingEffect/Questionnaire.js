@@ -29,8 +29,8 @@ export default class Questionnaire extends Component {
   handleClick() {
     if (this.state.answer) {
       this.state.answers.push({
-        questionId: this.state.question.id,
-        answerId: this.state.answer,
+        question: this.state.question,
+        answer: this.state.answer,
       });
 
       const index = this.state.index + 1;
@@ -60,7 +60,7 @@ export default class Questionnaire extends Component {
             {this.state.question && (
               <Form>
                 <Alert variant="info" className="col-12">
-                  <h6 className="center">{this.props.title}</h6>
+                  <p className="center">{this.props.title}</p>
                 </Alert>
                 <Form.Group ref={this.form}>
                   <Form.Label>{this.state.question.title}</Form.Label>

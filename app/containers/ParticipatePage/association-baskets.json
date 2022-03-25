@@ -1,23 +1,26 @@
 [
   {
-    "id": "2",
+    "id": 2,
     "title": "Your Basket",
+    "label": "Your Basket",
     "cardIds": [],
     "bgColor": "#18a2b8",
     "color": "#ffffff",
     "width": "650"
   },
   {
-    "id": "3",
+    "id": 3,
     "title": "Friends Basket",
+    "label": "your Friend's Basket",
     "cardIds": [],
     "bgColor": "#ffc108",
     "color": "#ffffff",
     "width": "650"
   },
   {
-    "id": "4",
+    "id": 4,
     "title": "Strangers Basket",
+    "label": "a Stranger's Basket",
     "cardIds": [],
     "bgColor": "#343a40",
     "color": "#ffffff",

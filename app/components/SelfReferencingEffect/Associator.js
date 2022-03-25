@@ -1,10 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Jumbotron, Modal } from 'react-bootstrap';
-
+import { Jumbotron, Modal, Button } from 'react-bootstrap';
 import Timer from 'tiny-timer';
 
-import { Column } from './encoding/Column';
+import { Basket } from './encode/Basket';
 
 const COUNT_FROM = 30;
 
@@ -15,6 +14,7 @@ export default class Associator extends React.Component {
       showModal: false,
       basket: null,
       countdown: COUNT_FROM,
+      displayInstructions: false,
     };
 
     this.timer = new Timer();
@@ -58,44 +58,55 @@ export default class Associator extends React.Component {
       this.timer.start(COUNT_FROM * 1000);
       await this.delay(COUNT_FROM * 1000);
     }
-    this.props.onComplete();
+
+    this.setState({ displayInstructions: true });
   }
 
   render() {
     return (
-      <div>
-        <Modal
-          show={this.state.showModal}
-          onHide={this.close}
-          backdrop="static"
-          keyboard={false}
-          centered
-          dialogClassName="modal-75w"
-        >
-          <Modal.Body>
-            {this.state.basket && (
-              <Jumbotron>
-                <h6>Hello, {this.props.fullname}</h6>
-                <h6>
-                  This is your basket/your best friend’s basket/a stranger’s
-                  basket. Take 30 seconds to associate yourself/your
-                  friend/stranger with this shopping basket
-                </h6>
-                <Column
-                  key={this.state.basket.id}
-                  title={this.state.basket.title}
-                  bgColor={this.state.basket.bgColor}
-                  color={this.state.basket.color}
-                  width={Number(this.state.basket.width)}
-                />
-                <br />
-                <br />
-                <h4 className="center">{this.state.countdown} Seconds</h4>
-              </Jumbotron>
-            )}
-          </Modal.Body>
-        </Modal>
-      </div>
+      <Modal
+        show={this.state.showModal}
+        onHide={this.close}
+        backdrop="static"
+        keyboard={false}
+        centered
+        dialogClassName="modal-75w"
+      >
+        <Modal.Body>
+          {this.state.basket && !this.state.displayInstructions && (
+            <Jumbotron>
+              <h6>Hello, {this.props.fullname}</h6>
+              <h6>
+                This is <strong>{this.state.basket.label}</strong>. Take {this.state.countdown} seconds to associate yourself with this shopping basket.
+              </h6>
+              <Basket
+                key={this.state.basket.id}
+                title={this.state.basket.title}
+                bgColor={this.state.basket.bgColor}
+                color={this.state.basket.color}
+                width={Number(this.state.basket.width)}
+                accept=""
+                onDrop={item => console.log({ item })}
+              />
+              <br />
+              <br />
+              <h4 className="center">{this.state.countdown} Seconds</h4>
+            </Jumbotron>
+          )}
+          {this.state.displayInstructions && (
+            <Jumbotron>
+              <h6>Hello, {this.props.fullname}</h6>
+              <h6>
+                Imagine that you, your best friend, and a stranger have gone grocery shopping together. As you go through the shop, you need to organise each person’s groceries into your separate baskets. You each have bought about {this.props.numItems} items.
+              </h6>
+              <h6>
+                This computer game is going to display the name of various grocery items to the left. If an item belongs to you, you must drag it to your shopping basket. If an item belongs to your friend, you must drag it to their basket. If an item belongs to the stranger, you must drag it into the stranger's basket. There is no time limit.
+              </h6>
+              <Button onClick={this.props.onComplete}>Continue</Button>
+            </Jumbotron>
+          )}
+        </Modal.Body>
+      </Modal>
     );
   }
 }
@@ -104,4 +115,5 @@ Associator.propTypes = {
   onComplete: PropTypes.func,
   fullname: PropTypes.string,
   baskets: PropTypes.array,
+  numItems: PropTypes.number,
 };

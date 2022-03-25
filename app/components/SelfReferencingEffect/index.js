@@ -14,13 +14,14 @@ import DemographicInformation from './DemographicInfomation';
 import DepressionScreening from './DepressionScreening';
 import Distractor from './Distractor';
 import EmotionInductor from './EmotionInductor';
-import Encoder from './Encoder';
+import Encode from './encode/Encode';
 
 export default class SelfReferencingEffect extends React.Component {
   constructor() {
     super();
 
     this.state = {
+      itemsLeft: 0,
       fullname: '',
       age: '',
       nationality: '',
@@ -61,12 +62,18 @@ export default class SelfReferencingEffect extends React.Component {
     this.complete = this.complete.bind(this);
     this.openDistractor = this.openDistractor.bind(this);
     this.closeDistractor = this.closeDistractor.bind(this);
+    this.componentDidMount = this.componentDidMount.bind(this);
+    this.itemsLeft = this.itemsLeft.bind(this);
 
     this.recallModal = React.createRef();
     this.resultsModal = React.createRef();
 
     this.onRecallComplete = this.onRecallComplete.bind(this);
     this.onResultsModalClose = this.onResultsModalClose.bind(this);
+  }
+
+  componentDidMount() {
+    this.setState({ itemsLeft: this.props.items.length });
   }
 
   consentGranted(fullname) {
@@ -124,8 +131,13 @@ export default class SelfReferencingEffect extends React.Component {
     this.associator.current.open();
   }
 
+  itemsLeft(itemsLeft) {
+    this.setState({ itemsLeft });
+  }
+
   openDistractor() {
-    this.distractor.current.open();
+    // this.distractor.current.open();
+    this.recallModal.current.open();
   }
 
   closeDistractor() {
@@ -145,20 +157,35 @@ export default class SelfReferencingEffect extends React.Component {
   }
 
   complete() {
+    const {
+      fullname,
+      age,
+      nationality,
+      gender,
+      prescribedGlasses,
+      wearGlasses,
+      device,
+      makeAndModel,
+      studentNumber,
+      course,
+    } = this.state;
     this.props.onComplete({
-      fullname: this.state.fullname,
-      age: this.state.age,
-      nationality: this.state.nationality,
-      gender: this.state.gender,
-      prescribedGlasses: this.state.prescribedGlasses,
-      wearGlasses: this.state.wearGlasses,
-      device: this.state.device,
-      makeAndModel: this.state.makeAndModel,
-      studentNumber: this.state.studentNumber,
-      course: this.state.course,
+      participant: {
+        fullname: this.state.fullname,
+        age: this.state.age,
+        nationality: this.state.nationality,
+        gender: this.state.gender,
+        prescribedGlasses: this.state.prescribedGlasses,
+        wearGlasses: this.state.wearGlasses,
+        device: this.state.device,
+        makeAndModel: this.state.makeAndModel,
+        studentNumber: this.state.studentNumber,
+        course: this.state.course,
+      },
       depressionScreeningResponses: this.state.depressionScreeningResponses,
       anxietyScreeningResponses: this.state.anxietyScreeningResponses,
       emotionReadings: this.state.emotionReadings,
+      emotionType: this.props.emotionType,
       recallAnswers: this.state.recallAnswers,
     });
   }
@@ -168,24 +195,25 @@ export default class SelfReferencingEffect extends React.Component {
       <div className="container">
         <div className="row">
           <DndProvider backend={HTML5Backend}>
-            <p>
+            <p style={{ fontSize: 18 }}>
               Imagine that you, your best friend, and a stranger have gone
               grocery shopping together. Once on your way out, you decide to
-              organise all the groceries you bought into your shopping bags. You
-              each have bought about {Math.round(this.props.items.length / 4)}
+              organise all the groceries you bought into your shopping baskets. You
+              each have bought about {Math.round(this.props.items.length / 4)} 
               items. This computer game is going to display the name of various
-              groceries 1 by 1, and if you have that item in your trolley, you
-              must drag it to your boot. If the item belongs to one of the other
-              people (your best friend or the stranger), drag it to their
-              basket. There is no time limit.
+              grocery items on the left. You are to drag items into fitting shopping
+              baskets on the right. There is no time limit. <strong>Proceed to Test </strong> 
+               when you are done.
             </p>
             <p>
-              <Button onClick={this.openDistractor}>Proceed to Test</Button>
+              <Button onClick={this.openDistractor} disabled={this.state.itemsLeft !== 0}>Proceed to Test</Button>
+              <span style={{ fontSize: 16 }}>&nbsp;&nbsp;{this.state.itemsLeft} Items left</span>
             </p>
-            <Encoder
+            <Encode
+              ref={this.encoder}
               items={this.props.items}
               baskets={this.props.baskets}
-              ref={this.encoder}
+              itemsLeft={this.itemsLeft}
             />
             <ConsentCheck
               onContinue={this.consentGranted}
@@ -216,6 +244,7 @@ export default class SelfReferencingEffect extends React.Component {
               fullname={this.state.fullname}
               baskets={this.props.associationBaskets}
               onComplete={this.associationComplete}
+              numItems={Math.round(this.props.items.length/4)}
             />
             <Distractor
               ref={this.distractor}
@@ -229,9 +258,8 @@ export default class SelfReferencingEffect extends React.Component {
             />
             <ResultsModal
               ref={this.resultsModal}
-              items={this.props.items}
-              answers={this.state.answers}
               onClose={this.onResultsModalClose}
+              fullname={this.state.fullname}
             />
           </DndProvider>
         </div>
@@ -249,4 +277,5 @@ SelfReferencingEffect.propTypes = {
   videoOptions: PropTypes.object,
   distractorVideoOptions: PropTypes.object,
   onComplete: PropTypes.func,
+  emotionType: PropTypes.string,
 };

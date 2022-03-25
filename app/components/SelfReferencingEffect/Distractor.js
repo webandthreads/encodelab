@@ -44,12 +44,12 @@ export default class Distractor extends React.Component {
           dialogClassName="modal-75w"
         >
           <Modal.Body>
-            <p className="blog-details-text">
-              Please carefully watch the following video. Are you ready?
+            <p className="blog-details-text" style={{ padding: 20, fontSize: 16 }}>
+              Thank you for doing the shopping. Now, please carefully watch the following video. Click button to Play.
+              <br />
+              <br />
+              <Button onClick={this.playVideo}>Play Video</Button>
             </p>
-            <Button onClick={this.playVideo}>Play Video</Button>
-            <br />
-            <br />
             <VideoPlayer
               ref={this.videoPlayer}
               options={this.props.options}

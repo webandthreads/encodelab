@@ -163,5 +163,85 @@
     "id": 47,
     "name": "Carrots",
     "image": "https://perompon.sirv.com/encodelab/items/047-carrot.png"
+  },
+  {
+    "id": 48,
+    "name": "Bleach",
+    "image": "https://perompon.sirv.com/encodelab/supermarket/045-bleach.png"
+  },
+  {
+    "id": 49,
+    "name": "iPod",
+    "image": "https://perompon.sirv.com/encodelab/supermarket/041-electronics.png"
+  },
+  {
+    "id": 50,
+    "name": "Speaker",
+    "image": "https://perompon.sirv.com/encodelab/supermarket/040-promotion.png"
+  },
+  {
+    "id": 51,
+    "name": "Cigarettes",
+    "image": "https://perompon.sirv.com/encodelab/supermarket/039-cigarettes.png"
+  },
+  {
+    "id": 52,
+    "name": "Makeup",
+    "image": "https://perompon.sirv.com/encodelab/supermarket/038-cosmetics.png"
+  },
+  {
+    "id": 53,
+    "name": "Coke",
+    "image": "https://perompon.sirv.com/encodelab/supermarket/036-soft-drink.png"
+  },
+  {
+    "id": 54,
+    "name": "Snack",
+    "image": "https://perompon.sirv.com/encodelab/supermarket/035-snack.png"
+  },
+  {
+    "id": 55,
+    "name": "Bottles",
+    "image": "https://perompon.sirv.com/encodelab/supermarket/034-bottles.png"
+  },
+  {
+    "id": 56,
+    "name": "Grapes",
+    "image": "https://perompon.sirv.com/encodelab/supermarket/030-grapes.png"
+  },
+  {
+    "id": 57,
+    "name": "Credit Card",
+    "image": "https://perompon.sirv.com/encodelab/supermarket/029-credit-card.png"
+  },
+  {
+    "id": 58,
+    "name": "Coffee",
+    "image": "https://perompon.sirv.com/encodelab/supermarket/021-paper-cup.png"
+  },
+  {
+    "id": 59,
+    "name": "Calculator",
+    "image": "https://perompon.sirv.com/encodelab/supermarket/018-calculator.png"
+  },
+  {
+    "id": 60,
+    "name": "Sauce",
+    "image": "https://perompon.sirv.com/encodelab/supermarket/017-sauce.png"
+  },
+  {
+    "id": 61,
+    "name": "Chicken",
+    "image": "https://perompon.sirv.com/encodelab/supermarket/011-chicken.png"
+  },
+  {
+    "id": 62,
+    "name": "Voucher",
+    "image": "https://perompon.sirv.com/encodelab/supermarket/002-discount.png"
+  },
+  {
+    "id": 63,
+    "name": "Basket",
+    "image": "https://perompon.sirv.com/encodelab/supermarket/001-basket.png"
   }
 ]

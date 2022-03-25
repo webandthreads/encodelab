@@ -3940,7 +3940,7 @@ aside .latest-post li figure {width: 75px;}
 .figure-caption { width: 100%; text-align: center; }
 .modal-75w { width: 75% !important; }
 .modal-backdrop.show {
-    opacity: 0.95;
+    opacity: 0.99;
 }
 .modal-dialog {
   max-width: 750px;

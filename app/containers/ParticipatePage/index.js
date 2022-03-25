@@ -10,9 +10,9 @@ import Wrapper from './Wrapper';
 import Breadcrump from '../../components/Breadcrump';
 
 import SelfReferencingEffect from '../../components/SelfReferencingEffect';
-import { ItemTypes } from '../../components/SelfReferencingEffect/ItemTypes';
+import { ItemTypes } from '../../components/SelfReferencingEffect/encode/ItemTypes';
 
-import '../../components/SelfReferencingEffect/encoding/styles.css';
+import '../../components/SelfReferencingEffect/encode/styles.css';
 
 import projects from '../ProjectsPage/projects.json';
 import items from './encoding-items.json';
@@ -33,11 +33,11 @@ function ParticipatePage({ match }) {
   } = match;
 
   const onComplete = async data => {
-    console.log('>>>>>>>>>>>>>>>>>>>>>>onComplete', { data });
+    console.log('>>>>>>>>>>>>>>>>>>>>>>onComplete', JSON.stringify(data));
     try {
-      const response = await axios.post(``, {
+      const response = await axios.post(`http://localhost:1338/api/v1/participation/self-referencing-effect`, JSON.stringify({
         ...data,
-      });
+      }));
       console.log(response);
     } catch (error) {
       console.log(error);
@@ -95,7 +95,15 @@ function ParticipatePage({ match }) {
     };
   });
   itemsList.sort(() => Math.random() - 0.5);
-  const video = Math.floor(Math.random() * 2) === 0 ? negative : neutral;
+  let video;
+  let emotionType;
+  if (Math.floor(Math.random() * 2) === 0) {
+    video = negative;
+    emotionType = 'negative';
+  } else {
+    video = neutral;
+    emotionType = 'neutral';
+  }
   const videoOptions = {
     autoplay: false,
     controls: false,
@@ -136,6 +144,7 @@ function ParticipatePage({ match }) {
               videoOptions={videoOptions}
               distractorVideoOptions={distractorVideoOptions}
               onComplete={onComplete}
+              emotionType={emotionType}
             />
           </div>
         </div>

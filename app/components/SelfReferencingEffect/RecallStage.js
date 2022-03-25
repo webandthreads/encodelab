@@ -1,12 +1,11 @@
 import React from 'react';
 import Modal from 'react-bootstrap/Modal';
 import Button from 'react-bootstrap/Button';
-import ProgressBar from 'react-bootstrap/ProgressBar';
 import PropTypes from 'prop-types';
 import Figure from 'react-bootstrap/Figure';
 import * as Timer from 'minimal-timer';
 
-import { ItemTypes } from './ItemTypes';
+import { ItemTypes } from './encode/ItemTypes';
 
 export default class RecallStage extends React.Component {
   constructor() {
@@ -16,7 +15,6 @@ export default class RecallStage extends React.Component {
       currentItem: null,
       currentIndex: null,
       currentQuestion: null,
-      progress: 0,
       answers: [],
     };
 
@@ -44,7 +42,6 @@ export default class RecallStage extends React.Component {
       currentIndex,
       currentItem: this.props.items[currentIndex],
       currentQuestion: 1,
-      progress: Math.round((currentIndex / this.props.items.length) * 100),
     });
     this.time.start();
   }
@@ -53,6 +50,7 @@ export default class RecallStage extends React.Component {
     this.time.stop();
     const { currentItem } = this.state;
     this.state.answers[currentItem.id] = {
+      item: currentItem,
       question1: {
         answer: value,
         time: this.time.elapsedTime(),
@@ -158,13 +156,6 @@ export default class RecallStage extends React.Component {
               </Button>
             </div>
           )}
-          <p>&nbsp;</p>
-          <ProgressBar
-            striped
-            variant="success"
-            now={this.state.progress}
-            label={`Stage Progress ${this.state.progress}%`}
-          />
         </Modal.Body>
       </Modal>
     );

@@ -152,23 +152,21 @@ export default class DemographicInformation extends React.Component {
                       <Form.Control
                         required
                         ref={this.makeAndModel}
-                        placeholder="What id your device Make and Model?"
+                        placeholder="What is your device Make and Model?"
                       />
                     </Form.Group>
                     <Form.Group>
-                      <Form.Label>Student Number</Form.Label>
+                      <Form.Label>UCT Student Number</Form.Label>
                       <Form.Control
-                        required
                         ref={this.studentNumber}
-                        placeholder="What id your Student Number?"
+                        placeholder="What is your Student Number?"
                       />
                     </Form.Group>
                     <Form.Group>
-                      <Form.Label>Course for SRPP Points</Form.Label>
+                      <Form.Label>If you are a UCT Student and doing this experiment for SRPP, for which Course do you require the credits?</Form.Label>
                       <Form.Control
-                        required
                         ref={this.course}
-                        placeholder="Which Course do you need the SRPP points for?"
+                        placeholder="Course for SRPP points"
                       />
                     </Form.Group>
                     <Button variant="success" type="submit">

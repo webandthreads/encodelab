@@ -5,15 +5,15 @@
     "options": [
       {
         "id": 0,
-        "title": "I do not feel sad"
+        "title": "I do not feel sad."
       },
       {
         "id": 1,
-        "title": "I feel sad"
+        "title": "I feel sad."
       },
       {
         "id": 2,
-        "title": "I am sad all the time and I can not snap out of it"
+        "title": "I am sad all the time and I can not snap out of it."
       },
       {
         "id": 3,
@@ -27,19 +27,19 @@
     "options": [
       {
         "id": 0,
-        "title": "I am not particularly discouraged about the future"
+        "title": "I am not particularly discouraged about the future."
       },
       {
         "id": 1,
-        "title": "I feel discouraged about the future"
+        "title": "I feel discouraged about the future."
       },
       {
         "id": 2,
-        "title": "I feel I have nothing to look forward to"
+        "title": "I feel I have nothing to look forward to."
       },
       {
         "id": 3,
-        "title": "I feel the future is hopeless and that things cannot improve"
+        "title": "I feel the future is hopeless and that things cannot improve."
       }
     ]
   },
@@ -49,19 +49,19 @@
     "options": [
       {
         "id": 0,
-        "title": "I do not feel like a failure"
+        "title": "I do not feel like a failure."
       },
       {
         "id": 1,
-        "title": "I feel I have failed more than the average person"
+        "title": "I feel I have failed more than the average person."
       },
       {
         "id": 2,
-        "title": "As I look back on my life, all I can see is a lot of failures"
+        "title": "As I look back on my life, all I can see is a lot of failures."
       },
       {
         "id": 3,
-        "title": "I feel I am a complete failure as a person"
+        "title": "I feel I am a complete failure as a person."
       }
     ]
   },
@@ -71,19 +71,19 @@
     "options": [
       {
         "id": 0,
-        "title": "I get as much satisfaction out of things as I used to"
+        "title": "I get as much satisfaction out of things as I used to."
       },
       {
         "id": 1,
-        "title": "I do not enjoy things the way I used to"
+        "title": "I do not enjoy things the way I used to."
       },
       {
         "id": 2,
-        "title": "I do not get real satisfaction out of anything anymore"
+        "title": "I do not get real satisfaction out of anything anymore."
       },
       {
         "id": 3,
-        "title": "I am dissatisfied or bored with everything"
+        "title": "I am dissatisfied or bored with everything."
       }
     ]
   },
@@ -93,19 +93,371 @@
     "options": [
       {
         "id": 0,
-        "title": "I do not feel particularly guilty "
+        "title": "I do not feel particularly guilty."
       },
       {
         "id": 1,
-        "title": "I feel guilty a good part of the time"
+        "title": "I feel guilty a good part of the time."
       },
       {
         "id": 2,
-        "title": "I feel quite guilty most of the time"
+        "title": "I feel quite guilty most of the time."
       },
       {
         "id": 3,
-        "title": "I feel guilty all of the time"
+        "title": "I feel guilty all of the time."
+      }
+    ]
+  },
+  {
+    "id": 6,
+    "title": "",
+    "options": [
+      {
+        "id": 0,
+        "title": "I don't feel I am being punished."
+      },
+      {
+        "id": 1,
+        "title": "I feel I may be punished."
+      },
+      {
+        "id": 2,
+        "title": "I expect to be punished."
+      },
+      {
+        "id": 3,
+        "title": "I feel I am being punished."
+      }
+    ]
+  },
+  {
+    "id": 7,
+    "title": "",
+    "options": [
+      {
+        "id": 0,
+        "title": "I don't feel disappointed in myself."
+      },
+      {
+        "id": 1,
+        "title": "I am disappointed in myself."
+      },
+      {
+        "id": 2,
+        "title": "I am disgusted with myself."
+      },
+      {
+        "id": 3,
+        "title": "I hate myself."
+      }
+    ]
+  },
+  {
+    "id": 8,
+    "title": "",
+    "options": [
+      {
+        "id": 0,
+        "title": "I don't feel I am any worse than anybody else."
+      },
+      {
+        "id": 1,
+        "title": "I am critical of myself for my weaknesses or mistakes."
+      },
+      {
+        "id": 2,
+        "title": "I blame myself all the time for my faults."
+      },
+      {
+        "id": 3,
+        "title": "I blame myself for everything bad that happens."
+      }
+    ]
+  },
+  {
+    "id": 9,
+    "title": "",
+    "options": [
+      {
+        "id": 0,
+        "title": "I don't have any thoughts of killing myself."
+      },
+      {
+        "id": 1,
+        "title": "I have thoughts of killing myself, but I would not carry them out."
+      },
+      {
+        "id": 2,
+        "title": "I would like to kill myself."
+      },
+      {
+        "id": 3,
+        "title": "I would kill myself if I had the chance."
+      }
+    ]
+  },
+  {
+    "id": 10,
+    "title": "",
+    "options": [
+      {
+        "id": 0,
+        "title": "I don't cry any more than usual."
+      },
+      {
+        "id": 1,
+        "title": "I cry more now than I used to."
+      },
+      {
+        "id": 2,
+        "title": "I cry all the time now."
+      },
+      {
+        "id": 3,
+        "title": "I used to be able to cry, but now I can't cry even though I want to."
+      }
+    ]
+  },
+  {
+    "id": 11,
+    "title": "",
+    "options": [
+      {
+        "id": 0,
+        "title": "I am no more irritated by things than I ever was."
+      },
+      {
+        "id": 1,
+        "title": "I am slightly more irritated now than usual."
+      },
+      {
+        "id": 2,
+        "title": "I am quite annoyed or irritated a good deal of the time."
+      },
+      {
+        "id": 3,
+        "title": "I feel irritated all the time."
+      }
+    ]
+  },
+  {
+    "id": 12,
+    "title": "",
+    "options": [
+      {
+        "id": 0,
+        "title": "I have not lost interest in other people."
+      },
+      {
+        "id": 1,
+        "title": "I am less interested in other people than I used to be."
+      },
+      {
+        "id": 2,
+        "title": "I have lost most of my interest in other people."
+      },
+      {
+        "id": 3,
+        "title": "I have lost all of my interest in other people."
+      }
+    ]
+  },
+  {
+    "id": 13,
+    "title": "",
+    "options": [
+      {
+        "id": 0,
+        "title": "I make decisions about as well as I ever could."
+      },
+      {
+        "id": 1,
+        "title": "I put off making decisions more than I used to."
+      },
+      {
+        "id": 2,
+        "title": "I have greater difficulty in making decisions more than I used to."
+      },
+      {
+        "id": 3,
+        "title": "I can't make decisions at all anymore."
+      }
+    ]
+  },
+  {
+    "id": 14,
+    "title": "",
+    "options": [
+      {
+        "id": 0,
+        "title": "I don't feel that I look any worse than I used to."
+      },
+      {
+        "id": 1,
+        "title": "I am worried that I am looking old or unattractive."
+      },
+      {
+        "id": 2,
+        "title": "I feel there are permanent changes in my appearance that make me look unattractive."
+      },
+      {
+        "id": 3,
+        "title": "I believe that I look ugly."
+      }
+    ]
+  },
+  {
+    "id": 15,
+    "title": "",
+    "options": [
+      {
+        "id": 0,
+        "title": "I can work about as well as before."
+      },
+      {
+        "id": 1,
+        "title": "It takes an extra effort to get started at doing something."
+      },
+      {
+        "id": 2,
+        "title": "I have to push myself very hard to do anything."
+      },
+      {
+        "id": 3,
+        "title": "I can't do any work at all."
+      }
+    ]
+  },
+  {
+    "id": 16,
+    "title": "",
+    "options": [
+      {
+        "id": 0,
+        "title": "I can sleep as well as usual."
+      },
+      {
+        "id": 1,
+        "title": "I don't sleep as well as I used to."
+      },
+      {
+        "id": 2,
+        "title": "I wake up 1-2 hours earlier than usual and find it hard to get back to sleep."
+      },
+      {
+        "id": 3,
+        "title": "I wake up several hours earlier than I used to and cannot get back to sleep."
+      }
+    ]
+  },
+  {
+    "id": 17,
+    "title": "",
+    "options": [
+      {
+        "id": 0,
+        "title": "I don't get more tired than usual."
+      },
+      {
+        "id": 1,
+        "title": "I get tired more easily than I used to."
+      },
+      {
+        "id": 2,
+        "title": "I get tired from doing almost anything."
+      },
+      {
+        "id": 3,
+        "title": "I am too tired to do anything."
+      }
+    ]
+  },
+  {
+    "id": 18,
+    "title": "",
+    "options": [
+      {
+        "id": 0,
+        "title": "My appetite is no worse than usual."
+      },
+      {
+        "id": 1,
+        "title": "My appetite is not as good as it used to be."
+      },
+      {
+        "id": 2,
+        "title": "My appetite is much worse now."
+      },
+      {
+        "id": 3,
+        "title": "I have no appetite at all anymore."
+      }
+    ]
+  },
+  {
+    "id": 19,
+    "title": "",
+    "options": [
+      {
+        "id": 0,
+        "title": "I haven't lost much weight, if any, lately."
+      },
+      {
+        "id": 1,
+        "title": "I have lost more than 2 kilograms."
+      },
+      {
+        "id": 2,
+        "title": "I have lost more than 4 kilograms."
+      },
+      {
+        "id": 3,
+        "title": "I have lost more than 6 kilograms."
+      }
+    ]
+  },
+  {
+    "id": 20,
+    "title": "",
+    "options": [
+      {
+        "id": 0,
+        "title": "I am no more worried about my health than usual."
+      },
+      {
+        "id": 1,
+        "title": "I am worried about physical problems like aches, pains, upset stomach, or constipation."
+      },
+      {
+        "id": 2,
+        "title": "I am very worried about physical problems and it's hard to think of much else."
+      },
+      {
+        "id": 3,
+        "title": "I am so worried about my physical problems that I cannot think of anything else."
+      }
+    ]
+  },
+  {
+    "id": 21,
+    "title": "",
+    "options": [
+      {
+        "id": 0,
+        "title": "I have not noticed any recent change in my interest in sex."
+      },
+      {
+        "id": 1,
+        "title": "I am less interested in sex than I used to be."
+      },
+      {
+        "id": 2,
+        "title": "I have almost no interest in sex."
+      },
+      {
+        "id": 3,
+        "title": "I have lost interest in sex completely."
       }
     ]
   }

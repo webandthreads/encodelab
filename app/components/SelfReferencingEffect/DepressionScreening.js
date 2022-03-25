@@ -36,7 +36,7 @@ export default class DepressionScreening extends React.Component {
         >
           <Modal.Body>
             <Quesionnaire
-              title="Answer how you feel to your best knowledge."
+              title="The following questions will ask about your feelings and activities. Please give the best response that describes you."
               questions={this.props.questions}
               onComplete={this.props.onComplete}
             />
