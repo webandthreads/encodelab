@@ -33,13 +33,11 @@ function ParticipatePage({ match }) {
   } = match;
 
   const onComplete = async data => {
-    console.log('>>>>>>>>>>>>>>>>>>>>>>onComplete', JSON.stringify(data));
     try {
       const response = await axios.post(
         `https://api.encodelab.org/api/v1/participation/self-referencing-effect`,
-        JSON.stringify({
-          ...data,
-        }),
+        // `http://localhost:1338/api/v1/participation/self-referencing-effect`,
+        data,
       );
       console.log(response);
     } catch (error) {
