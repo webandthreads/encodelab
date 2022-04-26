@@ -18,16 +18,16 @@ export const Basket = ({
       canDrop: monitor.canDrop(),
     }),
   });
-  const isActive = isOver && canDrop;
+  // const isActive = isOver && canDrop;
   let background = bgColor;
-  let color = 'white';
-  if (isActive) {
+  let color = 'red';
+  /* if (isActive) {
     background = '#76ba1b';
     color = 'red';
   } else if (canDrop) {
     background = '#acdf87';
     color = 'red';
-  }
+  } */
   return (
     <div ref={drop} className="Column" style={{ background, width, minHeight: 120 }}>
       <div className="Column__title" style={{ color }}>

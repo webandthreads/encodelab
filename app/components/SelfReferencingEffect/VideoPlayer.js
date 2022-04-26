@@ -57,13 +57,6 @@ export default class VideoPlayer extends React.Component {
     // Save mood update then play video
     this.state.readings.push({ time: this.player.currentTime(), value });
 
-    // TODO: Remove this
-    if (value === 5) {
-      // Save the readings
-      this.player.pause();
-      this.props.onComplete(this.state.readings);
-    }
-
     this.setState({ showRater: false });
     this.player.play();
   }
@@ -83,7 +76,10 @@ export default class VideoPlayer extends React.Component {
         (this.player.currentTime() / this.player.duration()) * 100,
       ),
     });
-    if (this.player.currentTime() >= this.state.pauseAt && !this.props.distractor) {
+    if (
+      this.player.currentTime() >= this.state.pauseAt &&
+      !this.props.distractor
+    ) {
       this.player.pause();
       this.setState({ showRater: true });
       this.setState({ pauseAt: this.state.timePauses.shift() });

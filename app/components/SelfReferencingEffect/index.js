@@ -2,7 +2,6 @@ import React from 'react';
 import { DndProvider } from 'react-dnd';
 import { HTML5Backend } from 'react-dnd-html5-backend';
 import PropTypes from 'prop-types';
-import Button from 'react-bootstrap/Button';
 
 import RecallStage from './RecallStage';
 import ResultsModal from './ResultsModal';
@@ -105,7 +104,6 @@ export default class SelfReferencingEffect extends React.Component {
       course,
     });
 
-    // this.setState({ ...information });
     this.depressionScreening.current.open();
   }
 
@@ -133,11 +131,14 @@ export default class SelfReferencingEffect extends React.Component {
 
   itemsLeft(itemsLeft) {
     this.setState({ itemsLeft });
+
+    if (itemsLeft === 0) {
+      this.openDistractor();
+    }
   }
 
   openDistractor() {
-    // this.distractor.current.open();
-    this.recallModal.current.open();
+    this.distractor.current.open();
   }
 
   closeDistractor() {
@@ -157,18 +158,6 @@ export default class SelfReferencingEffect extends React.Component {
   }
 
   complete() {
-    const {
-      fullname,
-      age,
-      nationality,
-      gender,
-      prescribedGlasses,
-      wearGlasses,
-      device,
-      makeAndModel,
-      studentNumber,
-      course,
-    } = this.state;
     this.props.onComplete({
       participant: {
         fullname: this.state.fullname,
@@ -206,7 +195,6 @@ export default class SelfReferencingEffect extends React.Component {
                when you are done.
             </p>
             <p>
-              <Button onClick={this.openDistractor} disabled={this.state.itemsLeft !== 0}>Proceed to Test</Button>
               <span style={{ fontSize: 16 }}>&nbsp;&nbsp;{this.state.itemsLeft} Items left</span>
             </p>
             <Encode
