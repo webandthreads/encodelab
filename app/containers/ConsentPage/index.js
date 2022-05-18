@@ -85,11 +85,9 @@ export default function ContactPage() {
                 </strong>
                 <br />
                 You will receive 2 SRPP points in return for your participation
-                in this study, which will be valid for the following courses
-                once the SRPP requirement is reinstated upon return to campus in
-                the future. Indirectly, you can also benefit by learning about
-                the research process, and the knowledge that you have helped
-                contribute to the body of research on ageing.
+                in this study. Indirectly, you can also benefit by learning
+                about the research process, and the knowledge that you have
+                helped contribute to the body of research on ageing.
               </p>
               <p>
                 <strong className="text-extra-dark-gray">
