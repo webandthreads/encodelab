@@ -1,3 +1,6 @@
+/* eslint-disable react/no-access-state-in-setstate */
+/* eslint-disable no-plusplus */
+/* eslint-disable jsx-a11y/media-has-caption */
 import React from 'react';
 import videojs from 'video.js';
 import PropTypes from 'prop-types';
@@ -105,9 +108,9 @@ export default class VideoPlayer extends React.Component {
               You will be asked several times throughout the upcoming video to
               state how you are feeling. Click on the emoji that best represents
               how you are feeling. On the far left, you have very negative, the
-              next is negative, in the middle you have neutral,to the right of
-              that is, and on the far right, you have very positive. You can
-              start over or exit participation at any time.
+              next is negative, in the middle you have neutral, on the far right
+              is very positive. You can start over or exit participation at any
+              time.
             </p>
           ) : (
             <h5 className="center">How are you feeling now?</h5>

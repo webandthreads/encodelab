@@ -36,7 +36,7 @@ export default class AnxietyScreening extends React.Component {
         >
           <Modal.Body>
             <Quesionnaire
-              title="Read each statement and then circle the appropriate number to the right of the statement to indicate how you feel right now at this moment. There are no right or wrong answers. Do not spend too much time on any one statement but click on the answer which seems to best describe your feelings best."
+              title="Read each statement and then click on the appropriate number to the right of the statement to indicate how you feel right now at this moment. There are no right or wrong answers. Do not spend too much time on any one statement but click on the answer which seems to best describe your feelings best."
               questions={this.props.questions}
               onComplete={this.props.onComplete}
             />

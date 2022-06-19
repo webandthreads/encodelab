@@ -44,8 +44,13 @@ export default class Distractor extends React.Component {
           dialogClassName="modal-75w"
         >
           <Modal.Body>
-            <p className="blog-details-text" style={{ padding: 20, fontSize: 16 }}>
-              Thank you for doing the shopping. Now, please carefully watch the following video. Click button to Play.
+            <p
+              className="blog-details-text"
+              style={{ padding: 20, fontSize: 16 }}
+            >
+              You will now watch a video of a stick figure. Please count the
+              number of times the stick figures arms cross. Click button to
+              Play.
               <br />
               <br />
               <Button onClick={this.playVideo}>Play Video</Button>

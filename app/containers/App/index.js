@@ -16,7 +16,6 @@ import ProjectsPage from 'containers/ProjectsPage/Loadable';
 import ProjectPage from 'containers/ProjectPage/Loadable';
 import PeoplePage from 'containers/PeoplePage/Loadable';
 import ContactPage from 'containers/ContactPage/Loadable';
-import ConsentPage from 'containers/ConsentPage/Loadable';
 import ParticipationsPage from 'containers/ParticipationsPage/Loadable';
 import ParticipatePage from 'containers/ParticipatePage/Loadable';
 import NotFoundPage from 'containers/NotFoundPage/Loadable';
@@ -49,7 +48,6 @@ export default function App() {
           render={props => <ProjectPage {...props} />}
         />
         <Route path="/people" component={PeoplePage} />
-        <Route path="/consent" component={ConsentPage} />
         <Route path="/contact" component={ContactPage} />
         <Route exact path="/participate" component={ParticipationsPage} />
         <Route

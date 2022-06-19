@@ -187,15 +187,17 @@ export default class SelfReferencingEffect extends React.Component {
             <p style={{ fontSize: 18 }}>
               Imagine that you, your best friend, and a stranger have gone
               grocery shopping together. Once on your way out, you decide to
-              organise all the groceries you bought into your shopping baskets. You
-              each have bought about {Math.round(this.props.items.length / 4)} 
+              organise all the groceries you bought into your shopping baskets.
+              You each have bought about{' '}
+              {Math.round(this.props.items.length / 4)}
               items. This computer game is going to display the name of various
-              grocery items on the left. You are to drag items into fitting shopping
-              baskets on the right. There is no time limit. <strong>Proceed to Test </strong> 
-               when you are done.
+              grocery items on the left. You are to drag items into fitting
+              shopping baskets on the right. There is no time limit.
             </p>
             <p>
-              <span style={{ fontSize: 16 }}>&nbsp;&nbsp;{this.state.itemsLeft} Items left</span>
+              <span style={{ fontSize: 16 }}>
+                &nbsp;&nbsp;{this.state.itemsLeft} Items left
+              </span>
             </p>
             <Encode
               ref={this.encoder}
@@ -232,7 +234,7 @@ export default class SelfReferencingEffect extends React.Component {
               fullname={this.state.fullname}
               baskets={this.props.associationBaskets}
               onComplete={this.associationComplete}
-              numItems={Math.round(this.props.items.length/4)}
+              numItems={Math.round(this.props.items.length / 4)}
             />
             <Distractor
               ref={this.distractor}
@@ -248,6 +250,7 @@ export default class SelfReferencingEffect extends React.Component {
               ref={this.resultsModal}
               onClose={this.onResultsModalClose}
               fullname={this.state.fullname}
+              history={this.props.history}
             />
           </DndProvider>
         </div>
@@ -266,4 +269,5 @@ SelfReferencingEffect.propTypes = {
   distractorVideoOptions: PropTypes.object,
   onComplete: PropTypes.func,
   emotionType: PropTypes.string,
+  history: PropTypes.object,
 };

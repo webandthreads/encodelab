@@ -56,8 +56,24 @@ export default class ConsentCheck extends React.Component {
               <div className="row">
                 <div className="col-12 blog-details-text last-paragraph-no-margin">
                   <Alert variant="warning" className="col-12">
-                    Instructions: Please read the following Consent Form
-                    carefully (the Click Continue with Participation).
+                    Instructions:
+                    <ul>
+                      <li>
+                        Please read the following Consent Form carefully (the
+                        Click Continue with Participation).
+                      </li>
+                      <li>
+                        Please complete this task on a laptop or PC computer
+                        whilst seated in a quiet, distraction-free environment.
+                        Please do not complete this task on a cellphone or
+                        tablet.
+                      </li>
+                      <li>
+                        There is audio in this task, so please make sure your
+                        computers volume is turned up and that you have access
+                        to your computer speakers or headphones.
+                      </li>
+                    </ul>
                   </Alert>
                   <h6 className="center">
                     Consent to Participate in a Research Study (2 SRPP points)
